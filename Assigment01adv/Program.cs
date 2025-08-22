@@ -12,7 +12,7 @@ namespace Assigment01adv
             int left = 0, right = arr.Count - 1;
             while (left < right)
             {
-                object temp = arr[left];
+                object temp = arr[left]??0;
                 arr[left] = arr[right];
                 arr[right] = temp;
                 left++;
@@ -109,6 +109,7 @@ namespace Assigment01adv
             else
                 Console.WriteLine("No unique character found.");
             #endregion
+
         }
     }
 }
